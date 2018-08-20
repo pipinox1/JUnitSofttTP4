@@ -47,12 +47,16 @@ public class TestUser {
 		assertEquals(resultadoEsperado,resultadoObtenido);
 	}
 	
+	
+	
 	@Test
 	public void testModificarPuntajeLimiteNivel() {
 		boolean resultadoEsperado = false;
 		boolean resultadoObtenido = Servicios.modificarPuntajeLimiteNivel(5, -100);
 		assertEquals(resultadoEsperado,resultadoObtenido);
 	}
+	
+	
 	
 	@Test
 	public void testModificarPuntajeLimiteNivel2() {
@@ -70,4 +74,138 @@ public class TestUser {
 		assertEquals(resultadoEsperado,resultadoObtenido);
 		
 	}
+
+	
+	@Test
+	public void testPuntuarPorMultiplicacion() {
+		int numero1 = 5;
+		int numero2 = 4;
+		int respuesta=20;
+		int puntosAOtorgar = 2;
+		int puntosObetindo =Servicios.puntuarPorMultiplicacion(numero1,numero2, respuesta);
+		assertEquals(puntosObetindo, puntosAOtorgar);
+		
+	}
+	@Test
+	public void testPuntuarPorResta() {
+		int numero1 = 10;
+		int numero2 = 3;
+		int respuesta=6;
+		int puntosAOtorgar = 0;
+		int puntosObetindo =Servicios.puntuarPorResta(numero1,numero2, respuesta);
+		assertEquals(puntosObetindo, puntosAOtorgar);
+		
+	}
+	@Test
+	public void testPuntuarPorDivisionEntera() {
+		int numero1 = 20;
+		int numero2 = 4;
+		int respuesta=5;
+		int puntosAOtorgar = 3;
+		int puntosObetindo =Servicios.puntuarPorDivisionEntera(numero1,numero2, respuesta);
+		assertEquals(puntosObetindo, puntosAOtorgar);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Test
+	public void testPuntuarPorEcuacion() {
+		int numero1 = 10;
+		int numero2 = 3;
+		int numero3 = 20;
+		int numero4 = 5;
+		int numero5 = 2;
+		int respuesta=10;
+		int puntosAOtorgar = 5;
+		int puntosObetindo =Servicios.puntuarPorEcuacion(numero1,numero2,numero3, numero4,numero5, respuesta);
+		assertEquals(puntosObetindo, puntosAOtorgar);
 }
+	
+	
+	@Test
+	public void testAccederCalculadora() {
+		boolean resultadoEsperado = true;
+		Usuario usuario = new Usuario();
+		usuario.setTipoUsuario("tutor");
+		boolean resultadoObtenido = Servicios.accederCalculadora(usuario);
+		assertEquals(resultadoEsperado,resultadoObtenido);
+	}
+
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
+
+
+
+

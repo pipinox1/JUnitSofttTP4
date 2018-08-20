@@ -4,6 +4,17 @@ public class Usuario {
 	
 	private String nombreUsuario;
 	private int nivelUsuario;
+	
+	private String tipoUsuario;
+
+	
+	
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
 	public String getNombreUsuario() {
 		return nombreUsuario;
 	}

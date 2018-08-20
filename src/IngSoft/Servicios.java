@@ -97,6 +97,71 @@ public class Servicios {
 		return false;
 		
 	}
+	
+	public static int puntuarPorDivisionEntera(int a,int b,int resultadoObtenido) {
+		
+		int resultadoVerdadero = a/b;
+		if(resultadoVerdadero != resultadoObtenido) {
+			System.out.println("El resultado Correcto es: "+resultadoVerdadero );
+			return 0;
+		
+		}
+		else {
+			System.out.println("Respuesta a la division correcta!");
+			return 3;
+		}
+	}
+	
+	public static int puntuarPorResta(int a,int b,int resultadoObtenido) {
+		
+		int resultadoVerdadero = a-b;
+		if(resultadoVerdadero != resultadoObtenido) {
+			System.out.println("El resultado Correcto es: "+resultadoVerdadero );
+			return 0;
+		
+		}
+		else {
+			System.out.println("Respuesta a la resta correcta!");
+			return 1;
+		}
+	}
+	public static int puntuarPorMultiplicacion(int a,int b,int resultadoObtenido) {
+		
+		int resultadoVerdadero = a*b;
+		if(resultadoVerdadero != resultadoObtenido) {
+			System.out.println("El resultado Correcto es: "+resultadoVerdadero );
+			return 0;
+		
+		}
+		else {
+			System.out.println("Respuesta a la multiplicacion correcta!");
+			return 2;
+		}
+	}
+	
+	public static int puntuarPorEcuacion(int a, int b, int c, int d, int e, int resultadoObtenido) {
+		int resultadoVerdadero = a/e + (c-d)/b;
+		if(resultadoVerdadero != resultadoObtenido) {
+			System.out.println("El resultado Correcto es: "+ resultadoVerdadero );
+			return 0;
+		}
+		else {
+			System.out.println("Respuesta Correcta!");
+			return 5;
+		}
+	}
+	
+	
+	public static boolean accederCalculadora(Usuario usuario) {
+		
+		if(usuario.getNivelUsuario()>=5 || usuario.getTipoUsuario() == "profesor") {
+			return true;
+		}
+		return false;
+		
+	}
+
+
 
 }
 
